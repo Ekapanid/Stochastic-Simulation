@@ -7,32 +7,7 @@ z<-c(1/4,1/4,1/2)
 P<-rbind(a,b,z) 
 
 
-# THIS MATRIX HAS PERIODICITY 1 AND THE MARKOV CHAIN IS IRREDUCIBLE.
 
-
- #STUDYING ASYMPTOTIC BEHAVIOR OF TRANSITION MATRICES AND THEIR ERGODICITY COEFFICIENT (THIS IS A METRIC OF THEIR CONVERGENCE SPEED)
-
- i<-1 
- k<-1 
- j<-1  
- P<-P%*%P 
- P 
-
- 
- for (i in 1:2){ 
-  for(k in 2:3){ 
-     t<-0 
-     for(j in 1:3){ 
-       u<-min(P[i,j],P[k,j]) 
-       t<-t+u 
-     } 
-     print(t) 
-   } 
- } 
- 
- P<-P%*%P%*%P%*%P%*%P%*%P%*%P%*%P%*%P%*%P 
- P 
- 
  
 # SIMULATION OF DISCRETE MARKOV CHAINS
  
